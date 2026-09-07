@@ -1,0 +1,11 @@
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\bin\Release\net8.0\win-x64\WindowsPreventer.Licensing.deps.json
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\bin\Release\net8.0\win-x64\WindowsPreventer.Licensing.dll
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\bin\Release\net8.0\win-x64\WindowsPreventer.Licensing.pdb
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\obj\Release\net8.0\win-x64\WindowsPreventer.Licensing.GeneratedMSBuildEditorConfig.editorconfig
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\obj\Release\net8.0\win-x64\WindowsPreventer.Licensing.AssemblyInfoInputs.cache
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\obj\Release\net8.0\win-x64\WindowsPreventer.Licensing.AssemblyInfo.cs
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\obj\Release\net8.0\win-x64\WindowsPreventer.Licensing.csproj.CoreCompileInputs.cache
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\obj\Release\net8.0\win-x64\WindowsPreventer.Licensing.dll
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\obj\Release\net8.0\win-x64\refint\WindowsPreventer.Licensing.dll
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\obj\Release\net8.0\win-x64\WindowsPreventer.Licensing.pdb
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Licensing\obj\Release\net8.0\win-x64\ref\WindowsPreventer.Licensing.dll

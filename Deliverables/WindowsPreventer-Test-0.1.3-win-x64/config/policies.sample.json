@@ -1,0 +1,15 @@
+{
+  "TargetUsers": [
+    "OTX-5B3QFS3\\WsiAccount",
+    "IIS APPPOOL\\DefaultAppPool",
+    "OPENTEXT_kmaddi_$",
+    "OTX-5B3QFS3_WsiAccount_$"
+  ],
+  "ExemptAdministrators": true,
+  "Controls": {
+    "DisableRightClick": true,
+    "HideRestartAndShutdown": true,
+    "DisableClipboardHistory": true,
+    "DisableCopyPaste": false
+  }
+}

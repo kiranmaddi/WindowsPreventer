@@ -1,0 +1,6 @@
+C:\DreamProjects\WindowsPreventer\artifacts\publish\desktop-win-x64\WindowsPreventer.App.pdb
+C:\DreamProjects\WindowsPreventer\artifacts\publish\desktop-win-x64\config\license.sample.json
+C:\DreamProjects\WindowsPreventer\artifacts\publish\desktop-win-x64\config\policies.sample.json
+C:\DreamProjects\WindowsPreventer\artifacts\publish\desktop-win-x64\WindowsPreventer.Core.pdb
+C:\DreamProjects\WindowsPreventer\artifacts\publish\desktop-win-x64\WindowsPreventer.Licensing.pdb
+C:\DreamProjects\WindowsPreventer\artifacts\publish\desktop-win-x64\WindowsPreventer.App.exe

@@ -1,0 +1,12 @@
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\bin\Release\net8.0-windows\WindowsPreventer.Core.deps.json
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\bin\Release\net8.0-windows\WindowsPreventer.Core.dll
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\bin\Release\net8.0-windows\WindowsPreventer.Core.pdb
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\WindowsPreventer.Core.csproj.AssemblyReference.cache
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\WindowsPreventer.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\WindowsPreventer.Core.AssemblyInfoInputs.cache
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\WindowsPreventer.Core.AssemblyInfo.cs
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\WindowsPreventer.Core.csproj.CoreCompileInputs.cache
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\WindowsPreventer.Core.dll
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\refint\WindowsPreventer.Core.dll
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\WindowsPreventer.Core.pdb
+C:\DreamProjects\WindowsPreventer\src\WindowsPreventer.Core\obj\Release\net8.0-windows\ref\WindowsPreventer.Core.dll

@@ -1,0 +1,10 @@
+{
+  "TargetUsers": [],
+  "ExemptAdministrators": true,
+  "Controls": {
+    "DisableRightClick": true,
+    "HideRestartAndShutdown": true,
+    "DisableClipboardHistory": true,
+    "DisableCopyPaste": false
+  }
+}

@@ -1,0 +1,145 @@
+﻿<Window x:Class="WindowsPreventer.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Windows Preventer" Height="760" MinHeight="680" Width="1280" MinWidth="1040"
+        Background="#F4F1EA">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Margin="0,0,0,18">
+            <StackPanel DockPanel.Dock="Left">
+                <TextBlock Text="Windows Preventer" FontSize="30" FontWeight="SemiBold" Foreground="#202124" />
+                <TextBlock Text="Administrator console for profile-based Windows restrictions" FontSize="14" Foreground="#5F6368" Margin="1,4,0,0" />
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                <Button x:Name="RunAsAdministratorButton" Content="Run as Administrator" Width="150" Height="30" Margin="0,0,10,0" Click="RunAsAdministrator_Click" />
+                <Border Background="#E8EFE3" BorderBrush="#B4C7A8" BorderThickness="1" CornerRadius="6" Padding="12,8">
+                    <TextBlock x:Name="ElevationStatusText" FontWeight="SemiBold" Foreground="#234221" />
+                </Border>
+            </StackPanel>
+        </DockPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="560" MinWidth="460" MaxWidth="760" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" MinWidth="420" />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="#FFFFFF" BorderBrush="#D6D0C4" BorderThickness="1" CornerRadius="8" Padding="18">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="Policy File" FontSize="16" FontWeight="SemiBold" Foreground="#202124" />
+                        <Grid Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="8" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="ConfigPathTextBox" Grid.Column="0" Height="34" VerticalContentAlignment="Center" />
+                            <Button Grid.Column="2" Width="82" Content="Browse" Click="BrowseConfig_Click" />
+                        </Grid>
+                        <TextBlock Text="License File" FontSize="16" FontWeight="SemiBold" Foreground="#202124" Margin="0,16,0,0" />
+                        <Grid Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="8" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="LicensePathTextBox" Grid.Column="0" Height="34" VerticalContentAlignment="Center" />
+                            <Button Grid.Column="2" Width="82" Content="Browse" Click="BrowseLicense_Click" />
+                        </Grid>
+                        <Border Background="#F7F6F1" BorderBrush="#D6D0C4" BorderThickness="1" CornerRadius="6" Padding="10" Margin="0,10,0,0">
+                            <TextBlock x:Name="LicenseStatusText" TextWrapping="Wrap" Foreground="#202124" />
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Margin="0,22,0,0">
+                        <TextBlock Text="Selected Target Users" FontSize="16" FontWeight="SemiBold" Foreground="#202124" />
+                        <TextBlock Text="Choose users below or add one account manually. Empty means no user-specific target." Foreground="#5F6368" Margin="0,4,0,8" TextWrapping="Wrap" />
+                        <ListBox x:Name="SelectedTargetUsersListBox" Height="96" SelectionMode="Extended" />
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="8" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="ManualTargetUserTextBox" Grid.Column="0" Height="30" VerticalContentAlignment="Center" />
+                            <Button Grid.Column="2" Width="60" Content="Add" Click="AddManualTargetUser_Click" />
+                        </Grid>
+                        <UniformGrid Columns="2" Margin="0,8,0,0">
+                            <Button Content="Remove Selected" Height="30" Margin="0,0,5,0" Click="RemoveSelectedTargetUsers_Click" />
+                            <Button Content="Clear All" Height="30" Margin="5,0,0,0" Click="ClearTargetUsers_Click" />
+                        </UniformGrid>
+                        <CheckBox x:Name="ExemptAdministratorsCheckBox" Content="Exempt local administrators" IsChecked="True" Margin="0,10,0,0" />
+                        <DockPanel Margin="0,16,0,8">
+                            <TextBlock Text="Detected Windows Users" FontSize="16" FontWeight="SemiBold" Foreground="#202124" />
+                            <Button DockPanel.Dock="Right" Width="72" Content="Refresh" Click="RefreshProfiles_Click" />
+                        </DockPanel>
+                        <DataGrid x:Name="DetectedProfilesDataGrid" Height="150" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" SelectionMode="Extended" HeadersVisibility="Column">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="User" Binding="{Binding UserName}" Width="*" />
+                                <DataGridTextColumn Header="Type" Binding="{Binding ProfileType}" Width="95" />
+                                <DataGridTextColumn Header="Status" Binding="{Binding LoadStatus}" Width="90" />
+                                <DataGridTextColumn Header="Target" Binding="{Binding TargetStatus}" Width="90" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <UniformGrid Columns="2" Margin="0,8,0,0">
+                            <Button Content="Use Selected" Height="32" Margin="0,0,5,0" Click="UseSelectedProfiles_Click" />
+                            <Button Content="Use All Standard" Height="32" Margin="5,0,0,0" Click="UseAllStandardProfiles_Click" />
+                        </UniformGrid>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" Margin="0,22,0,0">
+                        <TextBlock Text="Controls" FontSize="16" FontWeight="SemiBold" Foreground="#202124" />
+                        <CheckBox x:Name="DisableRightClickCheckBox" Content="Disable Explorer right-click context menus (selected users)" Margin="0,10,0,0" />
+                        <CheckBox x:Name="HideRestartShutdownCheckBox" Content="Hide restart and shutdown commands (selected users)" Margin="0,8,0,0" />
+                        <CheckBox x:Name="DisableClipboardHistoryCheckBox" Content="Disable clipboard history and cloud sync (machine-wide)" Margin="0,8,0,0" />
+                        <CheckBox x:Name="DisableCopyPasteCheckBox" Content="Disable basic copy/paste (planned, not supported yet)" IsEnabled="False" Margin="0,8,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3" VerticalAlignment="Bottom" Margin="0,22,0,0">
+                        <Button Content="Save Config" Height="36" Click="SaveConfig_Click" />
+                        <Button Content="Preview Changes" Height="40" Margin="0,10,0,0" FontWeight="SemiBold" Background="#2F5D50" Foreground="White" Click="PreviewChanges_Click" />
+                        <UniformGrid Columns="2" Margin="0,10,0,0">
+                            <Button x:Name="ApplyButton" Content="Apply" Height="36" Margin="0,0,5,0" Click="Apply_Click" />
+                            <Button Content="Remove" Height="36" Margin="5,0,0,0" Click="Remove_Click" />
+                        </UniformGrid>
+                    </StackPanel>
+                </Grid>
+                </ScrollViewer>
+            </Border>
+
+            <GridSplitter Grid.Column="1" Width="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#D6D0C4" ShowsPreview="True" ResizeBehavior="PreviousAndNext" />
+
+            <Border Grid.Column="2" Background="#161A1D" BorderBrush="#3C444A" BorderThickness="1" CornerRadius="8" Padding="18">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <DockPanel Grid.Row="0" Margin="0,0,0,12">
+                        <TextBlock Text="Run Output" Foreground="#F5F2EA" FontSize="16" FontWeight="SemiBold" />
+                        <Button DockPanel.Dock="Right" Content="Clear" Width="72" Click="ClearOutput_Click" />
+                    </DockPanel>
+                    <TextBox x:Name="OutputTextBox" Grid.Row="1" IsReadOnly="True" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextWrapping="NoWrap" FontFamily="Cascadia Mono, Consolas" FontSize="13" Background="#0F1214" Foreground="#EAE7DD" BorderBrush="#3C444A" />
+                </Grid>
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>

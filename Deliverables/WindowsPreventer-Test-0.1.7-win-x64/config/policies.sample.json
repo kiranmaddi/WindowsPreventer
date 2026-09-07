@@ -1,0 +1,12 @@
+{
+  "TargetUsers": [
+    "OPENTEXT\\kmaddi"
+  ],
+  "ExemptAdministrators": false,
+  "Controls": {
+    "DisableRightClick": true,
+    "HideRestartAndShutdown": false,
+    "DisableClipboardHistory": false,
+    "DisableCopyPaste": false
+  }
+}

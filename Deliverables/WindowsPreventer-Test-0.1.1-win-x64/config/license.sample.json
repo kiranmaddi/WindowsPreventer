@@ -1,0 +1,12 @@
+{
+  "customerName": "Development Customer",
+  "licenseId": "WP-DEV-0001",
+  "edition": "Professional",
+  "expiresOn": "2027-09-05",
+  "maxDevices": 5,
+  "features": [
+    "DisableRightClick",
+    "HideRestartAndShutdown",
+    "DisableClipboardHistory"
+  ]
+}

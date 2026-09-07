@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsPreventer.Core\WindowsPreventer.Core.csproj" />
+    <ProjectReference Include="..\WindowsPreventer.Licensing\WindowsPreventer.Licensing.csproj" />
+    <None Include="..\..\config\license.sample.json" Link="config\license.sample.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\config\policies.sample.json" Link="config\policies.sample.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+</Project>

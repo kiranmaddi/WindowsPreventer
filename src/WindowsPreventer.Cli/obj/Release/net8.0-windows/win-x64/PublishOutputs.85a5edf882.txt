@@ -1,0 +1,4 @@
+C:\DreamProjects\WindowsPreventer\artifacts\publish\win-x64\windows-preventer.pdb
+C:\DreamProjects\WindowsPreventer\artifacts\publish\win-x64\WindowsPreventer.Core.pdb
+C:\DreamProjects\WindowsPreventer\artifacts\publish\win-x64\WindowsPreventer.Licensing.pdb
+C:\DreamProjects\WindowsPreventer\artifacts\publish\win-x64\windows-preventer.exe
